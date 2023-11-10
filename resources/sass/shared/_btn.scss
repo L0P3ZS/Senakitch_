@@ -1,0 +1,13 @@
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: $font-size-small;
+    color: $white;
+    background: $main-color;
+    cursor: pointer;
+    
+    &:hover {
+      letter-spacing: .2rem;
+    }
+  }

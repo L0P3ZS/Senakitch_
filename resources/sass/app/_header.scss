@@ -1,0 +1,232 @@
+//variables definidas en app.scss en :root
+$header-bg: var(--bg);
+$main-color: var(--main-color);
+$black: var(--black);
+$border: var(--border);
+
+.header {
+  background: $header-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: $border;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .logo img {
+    height: 6rem;
+  }
+
+  .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+    &:hover {
+      color: $main-color;
+      border-bottom: 0.1rem solid $main-color;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .cont-header-iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .account-manage{
+      font-size: 200px;
+    }
+    .icons a{
+      margin-right:.1rem;
+    }
+    .icons {
+      color: #fff;
+      cursor: pointer;
+      font-size: 2.5rem;
+
+      #search-btn:hover {
+        color: $main-color;
+      }
+      #cart-btn:hover {
+        color: $main-color;
+      }
+  }
+  // .cont-submenu-perfil{
+  //   &:hover{
+  //     .submenu-perfil{
+  //       display: flex;
+  //     }
+  //   }
+  //   button{
+  //     background-color: $header-bg;
+  //     .imagen-avatar{
+  //       object-fit: cover;
+  //       border-radius: 50%;
+  //     }
+  //   }
+  //   .submenu-perfil{
+  //     padding: 10px;
+  //     position: absolute;
+  //     border-radius: 5%;
+  //     display: none;
+  //     flex-direction: column;
+  //     right: 0;
+  //     background-color: #fff;
+  //     margin-right: 2.5%;
+  //     a{
+  //       font-weight: 300;
+  //       color: rgb(44, 70, 86);
+  //       margin: 0px 0px 0.25em;
+  //       i{
+  //         font-size: 80%;
+  //       }
+  //       &:hover{
+  //         color:rgba(44, 70, 86,.4) ;
+  //       }
+  //     }
+
+  //   }
+  // }
+  #menu-btn {
+    display: none;
+  }
+
+  .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    &.active {
+      transform: scaleY(1);
+    }
+    input {
+      height: 100%;
+      width: 100%;
+      font-size: 1.6rem;
+      color: $black;
+      padding: 1rem;
+      text-transform: none;
+    }
+
+    label {
+      cursor: pointer;
+      font-size: 2.2rem;
+      margin-right: 1.5rem;
+      color: $black;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+  }
+}
+
+
+  .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+
+    &.active {
+      right: 0;
+    }
+
+    .cart-item {
+      position: relative;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .fa-times {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: $black;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      img {
+        height: 7rem;
+      }
+
+      .content {
+        h3 {
+          font-size: 2rem;
+          color: $black;
+          padding-bottom: 0.5rem;
+        }
+
+        .price {
+          font-size: 1.5rem;
+          color: $main-color;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+      .cont-header-iconos{
+        #menu-btn {
+          display: inline-block;
+        }
+      }
+
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background: #fff;
+      width: 30rem;
+      height: calc(100vh - 9.5rem);
+
+      &.active {
+        right: 0;
+      }
+
+      a {
+        color: $black;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+      }
+    }
+
+    .search-form {
+      width: 90%;
+      right: 2rem;
+    }
+  }
+}
+
+
+
+

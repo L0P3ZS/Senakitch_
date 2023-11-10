@@ -1,0 +1,106 @@
+/* carrito */
+@import 'shared/heading';
+h1 {
+    margin-top: 4%;
+    margin-bottom: 0;
+}
+.contain {
+    margin-top: 3%;
+    margin-left: 8%;
+    color: white;
+
+    li {
+        font-size: 30px;
+    }
+
+    .comp {
+        margin: 10px;
+        margin-right: 30px;
+    }
+
+    .comp1 {
+        h4 {
+            font-size: 26px;
+        }
+        max-width: 70%;
+    }
+
+    .row {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        display: flex;
+
+        .ros img {
+            width: 150px;
+            height: 150px;
+            margin-left: 30px;
+        }
+
+        .des {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+
+            a {
+                font-size: 20px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                color: white;
+            }
+
+            b {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .rov {
+        margin-left: 10%;
+        margin-top: 40px;
+
+        .rovs {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .tot {
+        float: right;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+    }
+    .inpu input[type='number'] {
+        width: 50px;
+        height: 38px;
+        background: transparent;
+        font-size: 20px;
+        color: white;
+        border: var(--border);
+        margin-right: 10px;
+    }
+
+    .comp1 .btn {
+        margin-left: 8px;
+    }
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}

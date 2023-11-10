@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+
+
+
+
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+	max-height: 80%;
+}
+
+.repice-re{
+display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
+
+.contan-title {
+    order: -1; /* Coloca el contenedor-title al inicio del flex container */
+    background-color: #e7e7e7;
+    margin-bottom: 50px;
+    color: #222;
+	margin: 8% 10% 0% 10%;
+	height: 80px;
+}
+
+
+.contan-img {
+    background-color: #ffffff;
+   
+  
+   /* left: -50%;
+   top: 20%; */
+   
+   
+
+}
+
+.contan-product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+	/* max-width: 50%;
+	position: relative;
+	left: 50%; */
+}
+
+
+.hidden {
+	display: none;
+}
+
+.container-description,
+.container-additional-information,
+.container-reviews {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e4e4e4;
+	padding: 10px 0;
+}
+
+.title-description,
+.title-additional-information,
+.title-reviews {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.title-description h4,
+.title-additional-information h4,
+.title-reviews h4 {
+    font-weight: 300;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5; /* Ajusta este valor para cambiar la separación entre líneas */
+}
+.container-description,
+.container-additional-information,
+.container-reviews {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #3f9e3f; /* Cambia el color de la línea a verde (#3f9e3f) */
+    padding: 20px 0; /* Incrementé el padding para dar más espacio */
+}
+
+.text-description,
+.text-additional-information,
+.text-reviews {
+    font-size: 13px;
+    color: #252525;
+    line-height: 1.6; /* Ajusta este valor para cambiar la separación entre líneas */
+    margin-top: 25px;
+    word-wrap: break-word; /* Permite que el texto se rompa en líneas si es demasiado largo */
+    overflow-wrap: break-word; /* Agregamos esta propiedad para romper palabras */
+}
+
+
+.container-description {
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.text-description ol,
+.text-additional-information ol,
+.text-reviews ol {
+    list-style-type: none; /* Elimina la numeración de la lista */
+    padding: 0; /* Elimina el padding predeterminado de la lista */
+}
+
+.text-description ol li,
+.text-additional-information ol li,
+.text-reviews ol li {
+    display: flex;
+    align-items: flex-start; /* Alinea los íconos y el texto en la parte superior */
+    margin-bottom: 10px; /* Ajusta el margen inferior entre los elementos de la lista */
+}
+
+.text-description ol li i {
+    margin-right: 10px; /* Ajusta el margen derecho entre el ícono y el texto */
+}
+
+/* Ajusta el siguiente valor según la cantidad de palabras después de las cuales quieres que se salte de línea */
+.text-description ol li {
+    word-wrap: break-word;
+    max-width: 95%; /* Por ejemplo, se saltará de línea después de aproximadamente la mitad del ancho */
+}
+
+.btn {
+	display: inline-block;
+	padding: 5px 12px; 
+	background-color: #118e2e;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+	margin: 0% 10% 4% 10%;
+    position: relative;  
+}
+  
+  .btn:hover {
+	background-color: #3ce516;
+  }
+  
+  .btn i {
+	margin-right: 8px;
+  }
+  
+  .btn-download {
+	background-color: #007bff;
+  }

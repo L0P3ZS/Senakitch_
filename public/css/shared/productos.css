@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* Productos home */
+.heading {
+  margin: 3%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.modal-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  visibility: hidden;
+}
+
+.modal-body {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  border-radius: 3px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  height: 400px;
+  margin-top: -200px;
+  top: 50%;
+  z-index: 100;
+}
+
+.modal-inner {
+  padding: 50px;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transition: 0.45s ease-in-out;
+  -moz-transform: scale(0.5);
+  -moz-transition: 0.45s ease-in-out;
+  -ms-transform: scale(0.5);
+  -ms-transition: 0.45s ease-in-out;
+  -o-transform: scale(0.5);
+  -o-transition: 0.45s ease-in-out;
+  transform: scale(0.5);
+  transition: 0.45s ease-in-out;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: #333;
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transition: 0.15s ease-in-out;
+  -ms-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.modal-inner {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.modal-frame.active {
+  visibility: visible;
+  height: inherit;
+  display: block;
+}
+
+.modal-frame.active .modal-body {
+  -webkit-animation: popperIn 0.45s;
+  -moz-animation: popperIn 0.45s;
+  -ms-animation: popperIn 0.45s;
+  -o-animation: popperIn 0.45s;
+  animation: popperIn 0.45s;
+}
+
+@-webkit-keyframes popperIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.06);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes popperIn {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(1.06);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes popperIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes popperOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.15);
+  }
+}
+@-moz-keyframes popperOut {
+  0% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    -moz-transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: scale(1.15);
+  }
+}
+@keyframes popperOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+.modal-frame.active .modal-inner {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -webkit-transition: 0.15s ease-in-out;
+  -webkit-transition-delay: 0.13s;
+  -moz-transform: scale(1);
+  -moz-transition: 0.15s ease-in-out;
+  -moz-transition-delay: 0.13s;
+  -ms-transform: scale(1);
+  -ms-transition: 0.15s ease-in-out;
+  -ms-transition-delay: 0.13s;
+  -o-transform: scale(1);
+  -o-transition: 0.15s ease-in-out;
+  -o-webkit-transition-delay: 0.13s;
+  transform: scale(1);
+  transition: 0.15s ease-in-out;
+  transition-delay: 0.13s;
+}
+
+.modal-inner {
+  padding: 30px; /* Reducir el relleno para que el contenido no ocupe tanto espacio */
+  opacity: 0;
+  -webkit-transform: scale(0.5) translateY(-20px); /* Agregar traslación hacia arriba */
+  -webkit-transition: 0.45s ease-in-out;
+  -moz-transform: scale(0.5) translateY(-20px);
+  -moz-transition: 0.45s ease-in-out;
+  -ms-transform: scale(0.5) translateY(-20px);
+  -ms-transition: 0.45s ease-in-out;
+  -o-transform: scale(0.5) translateY(-20px);
+  -o-transition: 0.45s ease-in-out;
+  transform: scale(0.5) translateY(-20px);
+  transition: 0.45s ease-in-out;
+  text-align: center;
+}
+
+.modal-inner img {
+  max-width: 80%; /* Reducir el tamaño de la imagen */
+  border: 2px solid #4CAF50; /* Cambiar el color del borde a verde (#4CAF50) */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.modal-frame.active .modal-overlay {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.modal-frame.leave .modal-body {
+  opacity: 0;
+  -webkit-animation: popperOut 0.5s;
+  -webkit-transition: 0.3s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  -webkit-transform: scale(0.95);
+  -moz-animation: popperOut 0.5s;
+  -moz-transition: 0.3s ease-in-out;
+  -moz-transition-delay: 0.2s;
+  -moz-transform: scale(0.95);
+  -ms-animation: popperOut 0.5s;
+  -ms-transition: 0.3s ease-in-out;
+  -ms-transition-delay: 0.2s;
+  -ms-transform: scale(0.95);
+  animation: popperOut 0.5s;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.2s;
+  transform: scale(0.95);
+}
+
+.modal-frame.leave .modal-inner {
+  opacity: 0;
+  -webkit-transform: scale(0.95);
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transform: scale(0.95);
+  -moz-transition: 0.15s ease-in-out;
+  -ms-transform: scale(0.95);
+  -ms-transition: 0.15s ease-in-out;
+  -o-transform: scale(0.95);
+  -o-transition: 0.15s ease-in-out;
+  transform: scale(0.95);
+  transition: 0.15s ease-in-out;
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.products .box-container .box {
+  text-align: center;
+  border: var(--border);
+  padding: 2rem;
+}
+
+.products .box-container .box .icons a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border: var(--border);
+  color: #fff;
+  margin: 0.3rem;
+}
+
+.products .box-container .box .icons a:hover {
+  background: var(--main-color);
+}
+
+.products .box-container .box .image {
+  padding: 2.5rem 0;
+}
+
+.products .box-container .box .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 25rem;
+}
+
+.products .box-container .box .content h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars {
+  padding: 1.5rem;
+}
+
+.products .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
+.products .box-container .box .content .price {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=productos.css.map */

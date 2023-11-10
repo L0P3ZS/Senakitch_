@@ -1,0 +1,13 @@
+@import 'variables';
+.heading {
+  margin: 3%;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    font-size: $font-size-medium;
+    span {
+      color: $main-color;
+      text-transform: uppercase;
+    }
+  }
+  
